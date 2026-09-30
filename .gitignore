@@ -1,0 +1,15 @@
+node_modules/
+.venv/
+dist/
+.pytest_cache/
+.DS_Store
+Thumbs.db
+*.log
+.env*
+!.env.example
+src/renderer/renderer.bundle.js
+.textobserver/
+python_backend/chroma_db_storage/
+/test/
+__pycache__/
+*.pyc

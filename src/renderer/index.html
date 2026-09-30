@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-src 'self' data:; connect-src 'self' https://generativelanguage.googleapis.com;">
+  <title>TextObserver</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- ─── Sidebar: Тези + Пошук ────────────────────────────────────────── -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h2>ТЕЗИ</h2>
+        <button id="resetBtn" class="reset-btn" title="Скинути покриття">⟲</button>
+        <button id="pilcrowBtn" class="pilcrow-btn" title="Показати межі сегментів (¶)">¶</button>
+        <button id="debugBtn" class="debug-btn" title="Debug: межі сегментів">⊞</button>
+      </div>
+
+      <div id="thesesList" class="theses-list"></div>
+
+      <div class="threshold-control">
+        <label for="thresholdSlider">
+          Поріг: <span id="thresholdValue">60</span>
+        </label>
+        <input type="range" id="thresholdSlider" min="0" max="100" value="60">
+      </div>
+
+      <button id="addThesisBtn" class="add-thesis-btn">+ Додати тезу</button>
+
+      <!-- ─── Пошук (ChromaDB) ──────────────────────────────────────────── -->
+      <div class="search-panel">
+        <div class="search-header">
+          <span>🔎 ПОШУК</span>
+          <span id="pythonStatus" class="python-status loading">⏳</span>
+        </div>
+        <div class="search-input-row">
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="Семантичний запит..."
+          >
+          <button id="searchBtn" class="search-btn" title="Знайти схожі фрагменти">→</button>
+        </div>
+        <div class="search-count-row">
+          <label for="searchCount">Результатів:</label>
+          <select id="searchCount">
+            <option value="3">3</option>
+            <option value="5" selected>5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="all">Всі</option>
+          </select>
+          <button id="indexBtn" class="index-btn" title="Переіндексувати документ">⟳ Індекс</button>
+        </div>
+        <div id="searchResults" class="search-results"></div>
+      </div>
+    </div>
+
+    <!-- ─── Editor ────────────────────────────────────────────────────────── -->
+    <div class="editor-container">
+      <div class="document-toolbar">
+        <span id="documentModeLabel">Текстовий режим</span>
+        <button id="textViewBtn" class="document-view-btn active">Текст</button>
+        <button id="originalViewBtn" class="document-view-btn" disabled>Оригінал</button>
+      </div>
+      <div id="editor"></div>
+      <div id="documentViewer" class="document-viewer" hidden></div>
+    </div>
+  </div>
+
+  <!-- ─── Status Bar ────────────────────────────────────────────────────────── -->
+  <div class="status-bar">
+    <div class="status-left">
+      <span id="statusText" class="status-text">готов</span>
+      <span class="status-divider">|</span>
+      <span id="statusCount" class="status-count">0/0 сегментів</span>
+    </div>
+  </div>
+
+  <!-- ─── Modal ─────────────────────────────────────────────────────────────── -->
+  <div id="modalOverlay" class="modal-overlay" style="display: none;">
+    <div class="modal-dialog">
+      <h3 id="modalTitle"></h3>
+      <input type="text" id="modalInput" class="modal-input" placeholder="">
+      <div class="modal-buttons">
+        <button id="modalCancel" class="modal-btn cancel-btn">Скасувати</button>
+        <button id="modalOk" class="modal-btn ok-btn">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.bundle.js"></script>
+</body>
+</html>

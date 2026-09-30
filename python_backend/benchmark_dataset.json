@@ -1,0 +1,102 @@
+[
+  {
+    "query": "Приклад мети виробничої практики",
+    "expected_id": "seg_10",
+    "text_preview": "Мета та завдання дослідження. Метою виробничої практики є закріплення та поглибл..."
+  },
+  {
+    "query": "IT скорочення розшифровка",
+    "expected_id": "seg_7",
+    "text_preview": "Перелік умовних скорочень\n\nAPI - інтерфейс програмування застосунку.\n\nGUI - граф..."
+  },
+  {
+    "query": "недоліки ручного заповнення шаблонів",
+    "expected_id": "seg_18",
+    "text_preview": "Незважаючи на простоту реалізації, ручне заповнення шаблонів має низку суттєвих..."
+  },
+  {
+    "query": "Python перевірка ПІБ тегів",
+    "expected_id": "seg_137",
+    "text_preview": "# 1. Якщо знайдено теги ПІБ, створюємо блок для ПІБ\n\n        pib_tags = {\"[ПІБ_Р..."
+  },
+  {
+    "query": "Python зберегти документ вивести повідомлення",
+    "expected_id": "seg_161",
+    "text_preview": "save_path = os.path.join(self.output_dir, save_name)..."
+  },
+  {
+    "query": "модифікація docx без порушення форматування",
+    "expected_id": "seg_25",
+    "text_preview": "На відміну від звичайних текстових файлів, документ .docx містить не лише тексто..."
+  },
+  {
+    "query": "PyInstaller onefile _MEIPASS ресурси",
+    "expected_id": "seg_105",
+    "text_preview": "# Якщо програма запущена з PyInstaller --onefile, ресурси розпаковані в _MEIPASS..."
+  },
+  {
+    "query": "customtkinter прокручуваний фрейм",
+    "expected_id": "seg_124",
+    "text_preview": "# --- СЕРЕДНЯ ПАНЕЛЬ (Динамічні поля, які можна скролити) ---\n\n        self.scro..."
+  },
+  {
+    "query": "Проблеми форматування OOXML",
+    "expected_id": "seg_94",
+    "text_preview": "Левченко О. О. Проблеми форматування та конвертації електронних документів у фор..."
+  },
+  {
+    "query": "Python отримати поточну дату формат",
+    "expected_id": "seg_149",
+    "text_preview": "# Обробка дати\n\n        if \"[ДАТА]\" in self.detected_tags:\n\n            replacem..."
+  },
+  {
+    "query": "Актуальність автоматизації генерації документів",
+    "expected_id": "seg_8",
+    "text_preview": "OOP - об’єктно-орієнтоване програмування.\n\nUML - уніфікована мова моделювання...."
+  },
+  {
+    "query": "Python як перевірити порожнє поле",
+    "expected_id": "seg_156",
+    "text_preview": "# Обробка кастомних полів\n\n        for tag, entry in self.dynamic_entries.items(..."
+  },
+  {
+    "query": "customtkinter перемикач теми",
+    "expected_id": "seg_120",
+    "text_preview": "# Перемикач теми\n\n        self.theme_switch_var = ctk.StringVar(value=\"dark\")..."
+  },
+  {
+    "query": "чому важко змінювати docx текст",
+    "expected_id": "seg_30",
+    "text_preview": "</w:r>\n\n</w:p>\n\nСаме через таку багатошарову структуру пряма маніпуляція текстов..."
+  },
+  {
+    "query": "base_dir project_dir запуск з коду",
+    "expected_id": "seg_113",
+    "text_preview": "# коли запускаємо з коду — base_dir є директорією проекту\n\n            project_d..."
+  },
+  {
+    "query": "список літератури лістинг програмного коду",
+    "expected_id": "seg_100",
+    "text_preview": "Бородкіна І. Л. Технології розробки програмного забезпечення. Київ: Кондор, 2019..."
+  },
+  {
+    "query": "PyPI Shevchenko українська морфологія",
+    "expected_id": "seg_97",
+    "text_preview": "Shevchenko: Ukrainian morphology and declension library [Електронний ресурс] //..."
+  },
+  {
+    "query": "репозиторій шаблонів CV",
+    "expected_id": "seg_163",
+    "text_preview": "Додаток В Репозиторій з шаблонами\n\nhttps://drive.google.com/drive/folders/1Dtcx8..."
+  },
+  {
+    "query": "CustomTkinter динамічні поля DOCX",
+    "expected_id": "seg_76",
+    "text_preview": "програмна реалізація\n\n3.1 Розробка динамічного графічного інтерфейсу (CustomTkin..."
+  },
+  {
+    "query": "Python витягнути теги docx таблиць",
+    "expected_id": "seg_146",
+    "text_preview": "for table in doc.tables:\n\n            for row in table.rows:\n\n                fo..."
+  }
+]
